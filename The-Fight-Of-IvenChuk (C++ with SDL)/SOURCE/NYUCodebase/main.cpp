@@ -311,11 +311,11 @@ void UpdateGameLevel(float elapsed) {
 	// handle controls
 	// Player 1
 	if (p1controlsMoveLeft && (players[0].cooldown == 0 || players[0].inAir)){
-		players[0].speed[0] = -playerSpeed*1.5;
+		players[0].speed[0] = -playerSpeed*1.35;
 		players[0].width = -1;
 	}
 	else if (p1controlsMoveRight && (players[0].cooldown == 0 || players[0].inAir)){
-		players[0].speed[0] = playerSpeed*1.5;
+		players[0].speed[0] = playerSpeed*1.35;
 		players[0].width = 1;
 	}
 	// Player 2
@@ -351,11 +351,13 @@ void UpdateGameLevel(float elapsed) {
 
 			if (distance < 0.7f) {
 				players[1].speed[1] = 2.0f;
-				p2Health -= 15;
+				p2Health -= 12;
 				players[1].gettingWrecked = true;
 				players[1].cooldown = 0.5;
 			}
 		}
+		if (p2Health < 0)
+			p2Health = 0;
 	}
 	// Player 2 Attacks
 	if (p2NormalAttack && players[1].cooldown == 0) {
@@ -369,7 +371,7 @@ void UpdateGameLevel(float elapsed) {
 
 			if (distance < 0.5f) {
 				players[0].speed[1] = 2.0f;
-				p1Health -= 20;
+				p1Health -= 15;
 				players[0].gettingWrecked = true;
 				players[0].cooldown = 0.5;
 			}
@@ -382,11 +384,13 @@ void UpdateGameLevel(float elapsed) {
 
 			if (distance < 0.7f) {
 				players[0].speed[1] = 2.0f;
-				p1Health -= 25;
+				p1Health -= 18;
 				players[0].gettingWrecked = true;
 				players[0].cooldown = 0.6;
 			}
 		}
+		if (p1Health < 0)
+			p1Health = 0;
 	}
 	// Player 1 JUMP
 	if (players[0].collided[1]) {
@@ -483,7 +487,7 @@ int main(int argc, char *argv[])
 {
 	srand(time(NULL));
 	SDL_Init(SDL_INIT_VIDEO);
-	displayWindow = SDL_CreateWindow("Brian Chuk's Basic Platformer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1600, 900, SDL_WINDOW_OPENGL);
+	displayWindow = SDL_CreateWindow("GM Ivenchuk", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1600, 900, SDL_WINDOW_OPENGL);
 	SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
 	SDL_GL_MakeCurrent(displayWindow, context);
 #ifdef _WINDOWS
