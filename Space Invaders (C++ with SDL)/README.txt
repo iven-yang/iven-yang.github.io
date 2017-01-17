@@ -1,2 +1,5 @@
 
-Run: \NYUCodebase\Game.exe
+A classic arcade game redone
+
+Run:
+NYUCodebase\Game.exe
