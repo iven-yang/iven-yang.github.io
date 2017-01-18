@@ -1,25 +1,81 @@
 <html>
 	<head>
 		<style>
+			video { 
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+				background: url("./assets/sharpbackground.png") repeat 0 0;
+				background-size: cover;
+				transition: 1s opacity;
+			}
+			#button { 
+				display: block;
+				width: 80%;
+				padding: .4rem;
+				border: none; 
+				margin: 1rem auto; 
+				font-size: 1.3rem;
+				background: rgba(255,255,255,0.23);
+				color: #fff;
+				border-radius: 3px; 
+				cursor: pointer;
+				transition: .3s background;
+			}
+			#button:hover { 
+				background: rgba(0,0,0,0.5);
+			}
+			a {
+				display: inline-block;
+				color: #fff;
+				text-decoration: none;
+				background:rgba(0,0,0,0.5);
+				padding: .5rem;
+				transition: .6s background; 
+			}
+			a:hover{
+				background:rgba(0,0,0,0.9);
+			}
+			@media screen and (max-width: 500px) { 
+				div{width:70%;} 
+			}
+			@media screen and (max-device-width: 800px) {
+				html { background: url("./assets/sharpbackground.png") repeat 0 0;}
+				#bgvid { display: none; }
+			}
 			#topSection{
 				height: 100px;
 				width: 1920px;
-				margin-bottom: 5px;
-				position:fixed
+				margin-top: 300px;
+				position:absolute;
 			}
 			#column1{
-				margin-top: 125px;
+				margin-top: 1080px;
 				margin-left: 30px;
-				height: 2200px;
+				height: 900px;
 				width: 617px;
 				position: absolute;
+				
+				font-weight:100; 
+				background: rgba(0,0,0,0.3);
+				color: white;
 			}
 			#column2{
-				margin-top: 125px;
-				margin-left: 647px;
-				height: 2200px;
+				margin-top: 1080px;
+				margin-left: 670px;
+				height: 900px;
 				width: 617px;
 				position: absolute;
+				
+				font-weight:100; 
+				background: rgba(0,0,0,0.3);
+				color: white;
 			}
 			#column3{
 				margin-top: 125px;
@@ -29,8 +85,7 @@
 				position: absolute;
 			}
 			h1{
-				color: white;
-				font-size: 30pt;
+				animation: mymove 4s;
 			}
 			p{
 				color: white;
@@ -45,7 +100,31 @@
 				position:fixed;
 			}
 			.gray {
-				background: linear-gradient(#616161, #000000);
+				background: linear-gradient(#2E2E2E, #232323);
+			}
+			body{
+				margin-top:20px;
+				margin-left:20px;
+				background:#000
+			}
+			.bg {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: hidden;
+				z-index: -100;
+			}
+			.bg__video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			@keyframes mymove {
+				0% {word-spacing: 50px;}
 			}
 		</style>
 		
@@ -54,8 +133,10 @@
 		
 	</head>
 	
-	<body style="margin-top:20px; margin-left:20px; background-color:#000000;">
-		
+	<body>
+		<video id="bgvid" playsinline autoplay muted loop>
+			<source src="./assets/MagicTree.mp4" type="video/mp4">
+		</video>
 		<div id = "column1">
 			<body link=#66ccff>
 			<body visited=#fff0e7>
@@ -81,10 +162,8 @@
 			</p>
 		</div>
 		
-		
-		<div class="box gray" style = "margin-top:-50px; margin-left:-50px;"></div>
 		<div id = "topSection">
-			<h1 style="margin-top:-20px; margin-left:805px;color:#e3f2fd;font-family:'Open Sans',Times,serif;font-weight:bold;font-size:450%;">Iven Yang</h1>
+			<h1 style="margin-top: 0px; text-align: center; color:#e3f2fd; font-family:'Arial Black', Gadget, sans-serif; font-size:450%;">I v e n &nbsp; Y a n g</h1>
 			<span style="position:fixed; left:800px; bottom:20px; height:30px; width:100%; font-size:100%; color:#e3f2fd;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
 		</div>
 		
