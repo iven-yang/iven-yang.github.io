@@ -2,7 +2,7 @@
 	<head>
 		<style>
 			video { 
-				position: fixed;
+				position: absolute;
 				top: 50%;
 				left: 50%;
 				min-width: 100%;
@@ -11,7 +11,7 @@
 				height: auto;
 				z-index: -100;
 				transform: translateX(-50%) translateY(-50%);
-				background: url("./assets/MagicTree.png") no-repeat;
+				background: #000000;
 				background-size: cover;
 				transition: 1s opacity;
 			}
@@ -52,7 +52,7 @@
 			#topSection{
 				height: 100px;
 				width: 1920px;
-				margin-top: 300px;
+				margin-top: 350px;
 				position:absolute;
 			}
 			#column1{
@@ -61,10 +61,8 @@
 				height: 900px;
 				width: 617px;
 				position: absolute;
-				
-				font-weight:100; 
-				background: rgba(0,0,0,0.3);
 				color: white;
+				font-weight:100; 
 			}
 			#column2{
 				margin-top: 1080px;
@@ -72,17 +70,17 @@
 				height: 900px;
 				width: 617px;
 				position: absolute;
-				
-				font-weight:100; 
-				background: rgba(0,0,0,0.3);
 				color: white;
+				font-weight:100; 
 			}
 			#column3{
-				margin-top: 125px;
-				margin-left: 1264px;
-				height: 2200px;
+				margin-top: 1080px;
+				margin-left: 1310px;
+				height: 900px;
 				width: 617px;
 				position: absolute;
+				color: white;
+				font-weight:100; 
 			}
 			h1{
 				animation: mymove 4s;
@@ -105,7 +103,7 @@
 			body{
 				margin-top:20px;
 				margin-left:20px;
-				background:#000
+				background:#000000;
 			}
 			.bg {
 				position: fixed;
@@ -133,13 +131,12 @@
 		
 	</head>
 	
-	<body>
+	<body style="background:#000000;">
 		<video id="bgvid" playsinline autoplay muted loop>
 			<source src="./assets/MagicTree.mp4" type="video/mp4">
 		</video>
-		<div id = "column1">
-			<body link=#66ccff>
-			<body visited=#fff0e7>
+
+		<div id = "column1" style="background: rgba(0,0,0,0.3);">
 			<p>
 				<a href="./flash_stuff.html">Flash Games</a>
 				<br>
@@ -151,9 +148,7 @@
 				<br></br>
 			</p>
 		</div>
-		<div id = "column2">
-			<body link=#66ccff>
-			<body visited=#fff0e7>
+		<div id = "column2" style="background: rgba(0,0,0,0.3);">
 			<p>
 				<a href="./c++_games.html">C++ Games</a>
 				<br>
@@ -164,8 +159,7 @@
 		
 		<div id = "topSection">
 			<h1 style="margin-top: 0px; text-align: center; color:#e3f2fd; font-family:'Arial Black', Gadget, sans-serif; font-size:450%;">I v e n &nbsp; Y a n g</h1>
-			<span style="position:fixed; left:800px; bottom:20px; height:30px; width:100%; font-size:100%; color:#e3f2fd;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
 		</div>
-		
+		<span style="position:absolute; text-align: center; margin-top:1920px; height:30px; width:100%; font-size:100%; color:#e3f2fd;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
 	</body>
 </html>
