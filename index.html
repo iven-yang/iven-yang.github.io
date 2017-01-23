@@ -153,39 +153,55 @@
 			<p>
 				<br></br>
 				<a href="./flash_stuff.html">
-					<button class="button button1"> Flash Games </button>
+					<button class="button button1" style="margin-left:-150px; margin-top:-50px; position:absolute;"> Flash Games </button>
 				</a>
-				<br>
-					<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some Flash Games I have made</span>
-				</br><br></br>
+				<br></br>
+				<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some Flash Games I have made</span>
 			</p>
 		</div>
 		<div id = "column2">
 			<p>
-				<br></br><br></br><br></br><br></br><br></br><br></br>
-				<a href="./about_me.html">
-					<button class="button button2"> About Me </button>
+				<div id="aboutme" style="position:absolute; text-align:center; padding: 0px 50px; margin:100px -20px; opacity:0; transition: opacity 4s;">
+					<span style="font-size: 125%;">
+						Hello! <br></br>
+						I am Iven Yang, currently a junior studying Computer Science at <a href="https://www.nyu.edu/" target="_blank">New York University</a>. <br></br>
+						I was introduced to programming during freshman year of high school in my AP Computer Science class. I enjoyed it so much that I proceeded to take the rest of the CS courses my school offered.
+						I would later become a research assistant in the computing lab at the University of Kentucky and become dead set on pursuing CS as my focus in higher education. <br></br>
+						I've moved around a lot since I was a kid, but I've come to see myself as a native of Kentucky.
+						I enjoy making things and learn best by doing (like I've taught myself to make this website) &nbsp; :^)
+					</span>
+					
+				</div>
+				
+				<a>
+					<button class="button button2" id="aboutButt" style="margin-left:-138px; margin-top:420px; position:absolute;" onclick="clicked()"> About Me </button>
 				</a>
-				<br></br><br></br>
+				
+				<script>
+				function clicked(){
+					document.getElementById('aboutme').style.opacity=1;
+					document.getElementById('aboutButt').style.marginTop='0px';
+				}
+				</script>
+				
 				<a href="./Resume_2016.pdf">
-					<button class="button button2"> My Resume </button>
+					<button class="button button2" style="margin-left:-152px; margin-top:550px; position:absolute;"> My Resume </button>
 				</a>
-				<br></br><br></br>
+				
 				<a href="https://github.com/iven-yang">
-					<button class="button button2"> My Github </button>
+					<button class="button button2" style="margin-left:-166px; margin-top:680px; position:absolute;"> My Github </button>
 				</a>
-				<br></br><br></br>
+				
 			</p>
 		</div>
 		<div id="column3">
 			<p>
 				<br></br>
 				<a href="./c++_games.html">
-					<button class="button button3"> C++ Games </button>
+					<button class="button button3" style="margin-left:-150px; margin-top:-50px; position:absolute;"> C++ Games </button>
 				</a>
-				<br>
-					<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some C++ Games I have made</span>
-				</br><br></br>
+				<br></br>
+				<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some C++ Games I have made</span>
 			</p>
 		</div>
 		
