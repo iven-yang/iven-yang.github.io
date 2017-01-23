@@ -57,6 +57,17 @@
 				background: #008cba;
 			}
 			
+			.button4 {
+				font-size: 12px;
+				padding: 8px 8px;
+				width: 150px;
+				border: 2px solid rgba(102,191,97,0.8);
+				color:gold;
+			}
+			.button4:hover {
+				background: rgba(102,191,97,0.8);
+			}
+			
 			a {
 				display: inline-block;
 				color: #fff;
@@ -161,7 +172,7 @@
 		</div>
 		<div id = "column2">
 			<p>
-				<div id="aboutme" style="position:absolute; text-align:center; padding: 0px 50px; margin:100px -20px; opacity:0; transition: opacity 4s;">
+				<div id="aboutme" style="position:absolute; text-align:center; padding: 0px 50px; margin:100px -20px; opacity:0; transition: opacity 0.5s;">
 					<span style="font-size: 125%;">
 						Hello! <br></br>
 						I am Iven Yang, currently a junior studying Computer Science at <a href="https://www.nyu.edu/" target="_blank">New York University</a>. <br></br>
@@ -170,7 +181,8 @@
 						I've moved around a lot since I was a kid, but I've come to see myself as a native of Kentucky.
 						I enjoy making things and learn best by doing (like I've taught myself to make this website) &nbsp; :^)
 					</span>
-					
+					<img src="./assets/ok.png" style="position:absolute; margin:50px -380px; width:99px; height:138px;">
+					<button class="button button4" id="okButt" style="margin:110px -262px; position:absolute;" onclick="reclicked()"> Ok. </button>
 				</div>
 				
 				<a>
@@ -181,15 +193,23 @@
 				function clicked(){
 					document.getElementById('aboutme').style.opacity=1;
 					document.getElementById('aboutButt').style.marginTop='0px';
+					document.getElementById('resumeButt').style.marginTop='680px';
+					document.getElementById('gitButt').style.marginTop='750px';
+				}
+				function reclicked(){
+					document.getElementById('aboutme').style.opacity=0;
+					document.getElementById('aboutButt').style.marginTop='420px';
+					document.getElementById('resumeButt').style.marginTop='550px';
+					document.getElementById('gitButt').style.marginTop='680px';
 				}
 				</script>
 				
 				<a href="./Resume_2016.pdf">
-					<button class="button button2" style="margin-left:-152px; margin-top:550px; position:absolute;"> My Resume </button>
+					<button class="button button2" id="resumeButt" style="margin-left:-152px; margin-top:550px; position:absolute;"> My Resume </button>
 				</a>
 				
 				<a href="https://github.com/iven-yang">
-					<button class="button button2" style="margin-left:-166px; margin-top:680px; position:absolute;"> My Github </button>
+					<button class="button button2" id="gitButt" style="margin-left:-166px; margin-top:680px; position:absolute;"> My Github </button>
 				</a>
 				
 			</p>
