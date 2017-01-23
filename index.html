@@ -164,14 +164,19 @@
 			<p>
 				<br></br>
 				<a href="./flash_stuff.html">
-					<button class="button button1" style="margin-left:-150px; margin-top:-50px; position:absolute;"> Flash Games </button>
+					<button class="button button1" style="margin-left:-150px; margin-top: 50px; position:absolute;"> Flash Games </button>
 				</a>
-				<br></br>
+				<br></br><br></br><br></br>
 				<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some Flash Games I have made</span>
 			</p>
 		</div>
 		<div id = "column2">
 			<p>
+				<div id="welcome" style="position:absolute; opacity:1; transition: opacity 0.5s;">
+					<span style="margin: 0px 220px; font-size: 300%;">
+						Welcome
+					</span>
+				</div>
 				<div id="aboutme" style="position:absolute; text-align:center; padding: 0px 50px; margin:100px -20px; opacity:0; transition: opacity 0.5s;">
 					<span style="font-size: 125%;">
 						Hello! <br></br>
@@ -191,12 +196,14 @@
 				
 				<script>
 				function clicked(){
+					document.getElementById('welcome').style.opacity=0;
 					document.getElementById('aboutme').style.opacity=1;
 					document.getElementById('aboutButt').style.marginTop='0px';
 					document.getElementById('resumeButt').style.marginTop='680px';
 					document.getElementById('gitButt').style.marginTop='750px';
 				}
 				function reclicked(){
+					document.getElementById('welcome').style.opacity=1;
 					document.getElementById('aboutme').style.opacity=0;
 					document.getElementById('aboutButt').style.marginTop='420px';
 					document.getElementById('resumeButt').style.marginTop='550px';
@@ -218,9 +225,9 @@
 			<p>
 				<br></br>
 				<a href="./c++_games.html">
-					<button class="button button3" style="margin-left:-150px; margin-top:-50px; position:absolute;"> C++ Games </button>
+					<button class="button button3" style="margin-left:-150px; margin-top:50px; position:absolute;"> C++ Games </button>
 				</a>
-				<br></br>
+				<br></br><br></br><br></br>
 				<span style="font-family: Arial, sans-serif; line-height: 150%;">Look at some C++ Games I have made</span>
 			</p>
 		</div>
