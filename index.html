@@ -173,7 +173,9 @@
 		<div id = "column2">
 			<p>
 				<div id="welcome" style="position:absolute; opacity:1; transition: opacity 0.5s;">
-					<span style="margin: 0px 220px; font-size: 300%;">
+					<link href="https://fonts.googleapis.com/css?family=Kumar+One" rel="stylesheet">
+					<br></br><br></br><br></br>
+					<span style="margin: 0px 190px; font-family: 'Kumar One', cursive; font-size: 300%;">
 						Welcome
 					</span>
 				</div>
@@ -233,7 +235,24 @@
 		</div>
 		
 		<div id = "topSection">
-			<h1 style="margin-top: 0px; text-align: center; color:#e3f2fd; font-family:'Arial Black', Gadget, sans-serif; font-size:450%;">I v e n &nbsp; Y a n g</h1>
+			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+			<h1 style="margin-top: 0px; text-align: center; font-family: 'Montserrat', sans-serif; font-size:500%; font-weight:bold; ">
+				<script src="jquery-3.1.1.min.js">
+				$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+						scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+				});
+				</script>
+				<a href="#column2" id="titlelink" style="background-color: transparent; text-decoration: none; text-align: center; color:#e3f2fd;">I V E N &nbsp; Y A N G</a>
+			</h1>
 		</div>
 		<span style="position:absolute; text-align: center; margin-top:1920px; height:30px; width:100%; font-size:100%; color:#e3f2fd;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
 		
