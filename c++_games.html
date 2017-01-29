@@ -10,11 +10,35 @@ You can use it for personal purposes, just let me know :^)
 <html>
 	<head>
 		<style>
+			video {
+				animation: fadein 3s;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+				background: #000000;
+				background-size: cover;
+				transition: 1s opacity;
+			}
+			
+			@media screen and (max-width: 500px) { 
+				div{width:70%;} 
+			}
+			@media screen and (max-device-width: 800px) {
+				html { background: url("./assets/MagicTree.png") no-repeat;}
+				#bgvid { display: none; }
+			}
+			
 			#topSection{
 				height: 100px;
-				width: 1920px;
+				width: 100%;
 				margin-bottom: 5px;
-				position:fixed
+				position:fixed;
 			}
 			#column{
 				margin-top: 125px;
@@ -34,27 +58,32 @@ You can use it for personal purposes, just let me know :^)
 			}
 			.box{
 				float: left;
-				width: 1950px;
+				width: 110%;
 				height: 130px;
 				margin: 0px;
 				position:fixed;
 			}
-			.gray {
+			.blue {
 				background: linear-gradient(to bottom right, #36BBFF, #004568);
 			}
 			body{
 				margin-top:20px;
 				margin-left:20px;
-				background: url("./assets/sharpbackground.png") repeat 0 0;
-				background-attachment:fixed;
+			}
+			@keyframes fadein {
+				from { opacity: 0; }
+				to   { opacity: 1; }
 			}
 		</style>
 		
 		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-		
 	</head>
-	<body>
+	
+	<body style="background:#000000;">
+		<video id="bgvid" playsinline autoplay muted loop>
+			<source src="./assets/Forest.mp4" type="video/mp4">
+		</video>
 		<div id = "column">
 			<body link=#66ccff>
 			<body visited=#fff0e7>
@@ -68,15 +97,17 @@ You can use it for personal purposes, just let me know :^)
 					<span style="font-family: Arial, sans-serif; line-height: 150%;">What if my roommate and I put ourselves in a fighting game...</span>
 				</br><br></br>
 				<div>
-					<a href="./index.html#welcome" style="position:fixed; left:20px; bottom:20px; height:30px; width:100%; font-size:100%">Home</a>
-					<span style="position:fixed; left:800px; bottom:20px; height:30px; width:100%; font-size:100%; color:#e3f2fd;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
+					<a href="./index.html" style="position:fixed; left:20px; bottom:20px; height:30px; width:100%; font-size:100%">Home</a>
+					<span style="position:fixed; left:41%; bottom:20px; height:30px; width:330px; font-size:100%; color:#e3f2fd; background: rgba(0,0,0,0.4); padding: 5px 10px;">Iven Yang 2017     iy332@nyu.edu     1-859-519-8578</span>
 				</div>
 			</p>
 		</div>
 		
-		<div class="box gray" style = "margin-top:-50px; margin-left:-50px;"></div>
+		<div class="box blue" style = "margin-top:-50px; margin-left:-50px;"></div>
 		<div id = "topSection">
-			<h1 style="margin-top:-5px; margin-left:745px; color:#FAF7F7; font-family:'Times New Roman',Times,serif; font-weight:bold;font-size:450%;">C++ with OpenGL</h1>
+			<h1 style="text-align: center; margin-top: -20px; color:#FAF7F7; font-family:'Times New Roman',Times,serif; font-weight:bold; font-size:370%; border-style: double; padding: 20px 0px;">
+				C++ with OpenGL
+			</h1>
 		</div>
 	</body>
 </html>
